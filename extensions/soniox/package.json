@@ -1,0 +1,35 @@
+{
+  "name": "@openclaw/soniox-provider",
+  "version": "2026.8.1",
+  "description": "OpenClaw Soniox async speech-to-text (media-understanding) provider plugin.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tta-lab/openclaw"
+  },
+  "type": "module",
+  "devDependencies": {
+    "@openclaw/plugin-sdk": "workspace:*"
+  },
+  "openclaw": {
+    "extensions": [
+      "./index.ts"
+    ],
+    "install": {
+      "clawhubSpec": "clawhub:@openclaw/soniox-provider",
+      "npmSpec": "@openclaw/soniox-provider",
+      "defaultChoice": "clawhub",
+      "minHostVersion": ">=2026.8.1"
+    },
+    "compat": {
+      "pluginApi": ">=2026.8.1"
+    },
+    "build": {
+      "openclawVersion": "2026.8.1",
+      "bundledDist": false
+    },
+    "release": {
+      "publishToClawHub": true,
+      "publishToNpm": true
+    }
+  }
+}
